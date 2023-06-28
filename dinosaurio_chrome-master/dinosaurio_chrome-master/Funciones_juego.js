@@ -59,6 +59,7 @@ var dino;
 var textoScore;
 var suelo;
 var gameOver;
+var tiempoDia="dia";
 
 function Start() {
     gameOver = document.querySelector(".game-over");
@@ -198,25 +199,30 @@ function GanarPuntos() {
     textoScore.innerText = score;
 
     if (score % 10 === 0) {
-        cambiarFondoYVelocidad();
+        cambiarFondoYVelocidad(tiempoDia);
     }
 
 }
 
-function cambiarFondoYVelocidad() {
-    if (score >= 5 && score < 10) {
-        gameVel = 1.5;
-        contenedor.classList.add("mediodia");
-    } else if (score >= 10 && score < 20) {
-        gameVel = 2;
-        contenedor.classList.remove("mediodia");
-        contenedor.classList.add("tarde");
-    } else if (score >= 20) {
-        gameVel = 2.5;
+function cambiarFondoYVelocidad(tiempoDia) {
+    if (tiempoDia=="dia") {
+        contenedor.classList.remove("dia");
+        contenedor.classList.add("tarde")
+        this.tiempoDia = "tarde"
+        console.log("Cambia dia a tarde")
+    } else if (tiempoDia == "tarde") {
         contenedor.classList.remove("tarde");
-        contenedor.classList.add("noche");
+        contenedor.classList.add("noche")
+        this.tiempoDia = "noche"
+        console.log("Cambia tarde a noche")
+    } else if (tiempoDia == "noche") {
+        contenedor.classList.remove("noche");
+        contenedor.classList.add("dia")
+        this.tiempoDia = "dia"
+        console.log("Cambia noche a dia")
     }
     suelo.style.animationDuration = (3 / gameVel) + "s";
+    
 }
 
 function GameOver() {
@@ -247,4 +253,8 @@ function IsCollision(a, b, paddingTop, paddingRight, paddingBottom, paddingLeft)
         ((aRect.left + aRect.width - paddingRight) < bRect.left) ||
         (aRect.left + paddingLeft > (bRect.left + bRect.width))
     );
+}
+
+function reiniciar() {
+    document.getElementById("reiniciar").onclick = aleatoria()
 }
