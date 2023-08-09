@@ -200,6 +200,7 @@ function GanarPuntos() {
 
     if (score % 10 === 0) {
         cambiarFondoYVelocidad(tiempoDia);
+        gameVel += 0.2;
     }
 
 }
