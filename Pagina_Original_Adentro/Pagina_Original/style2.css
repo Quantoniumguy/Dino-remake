@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    text-align: center;
+    font-family: sans-serif;
+    background: url(../Pagina_Original/img/fondo\ de\ pagina.jpg);
+    object-fit: cover;
+    background-size: contain;
+  
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 63px;
+    background: #171717;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    margin-right: 10px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a {
+    display: block;
+    padding: 20px 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.navbar a:hover {
+    background: #3f3f3f;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header {
+    height: 80vh !important;
+    background: url(img/dino.png) no-repeat center;
+    background-size: cover;
+}
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+}
+
+p {
+    margin-bottom: 40px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    padding: 0 100px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 40px;
+    border: 2px solid #b80dec;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    background: #e40fe4;
+}
+
+.btn:hover {
+    background: none;
+    
+}
+
+.btn-home {
+    display: flex;
+}
+
+.btn-home a {
+    margin: 0 10px;
+}
+
+
+.contenido {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sau {
+    padding: 30px;
+    background: #ae0dee
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    flex-direction: column ;
+    width: 100%;
+    backdrop-filter: blur(4px);
+
+}
+.box-container::before{
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: -1;
+    
+    backdrop-filter: blur(4px);
+}
+.box-container .box {
+    height: 12rem;
+    width: 25vw;
+    background: #2a2d49;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0 .3rem 5rem rgba(0, 0, 0, 0.959);
+    margin: 2rem;   
+    cursor: pointer; 
+    transition: all 400ms ease;
+}
+.box:hover{
+    box-shadow: 5px 5px 20px rgb(0, 0, 0);
+    transform: translateY(-3%);
+}
+.box-container .box i {
+    height: 3rem;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border-radius: 50%;
+    color: rgb(255, 255, 255);
+    background: #f8f8f8;
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
+
+.box-container .box h3 {
+    font-size: 20px;
+    color: #f1f2f5;
+
+}
+
+.box-container .box p {
+    padding: 0 15px;
+    font-size: 16px;
+}
+.cajitas{
+    height: 90vh;
+    width:70vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+}
+.titulo{
+    margin-top: 100px;
+    font-size: 80px;
+    font-family: Poppins, sans-serif;
+    color: #f1f2f5;
+    font-weight: 20px;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+}
+
+.proyectos {
+    background: url(img/juego.png\dino.png ) #f309d4fa no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+
+
+
+
+@media (max-width: 768px) {
+
+    .title {
+        margin-bottom: 0;
+        font-size: 40px;
+    }
+
+    .sau {
+        height: 100vh;
+    }
+
+    .navbar {
+        display: none;
+    }
+   
+    
+}

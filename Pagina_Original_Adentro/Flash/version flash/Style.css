@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html{
+    height: 100%;
+    background: #584040;
+    display: flex;
+    align-items: center;
+        margin: 0;
+        overflow: hidden;
+    
+}
+
+.contenedor {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    
+    position: relative;
+
+    background: linear-gradient(#b7d6c700, transparent) #113e57;/*linear-gradient(#90ebff, white);*/
+    overflow: hidden;
+}
+
+.dino {
+    width: 128px;
+    height: 123px;
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    z-index: 2;
+    background: url(img/reverserun.gif) repeat-x center bottom;
+    background-size: auto; /* Ajustar automáticamente al tamaño del elemento */
+  }
+
+.dino-corriendo {
+    animation: animarDino 1s steps(1) infinite;
+}
+
+.dino-saltando {
+    width: 99px;
+    height: 145px;
+
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    z-index: 2;
+
+    background: url(img/reversejump.png) repeat-x 0px 0px;
+}
+
+.dino-cayendo {
+    width: 99px;
+    height: 145px;
+
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    z-index: 2;
+
+    background: url(img/reverseland.png) repeat-x 0px 0px;
+}
+
+.dino-estrellado {
+    width: 137px;
+    height: 125px;
+
+    position: absolute;
+    bottom: 35px;
+    left: 0px;
+    z-index: 2;
+
+    background: url(img/reversedeath.gif) repeat-x 0px 0px;
+}
+
+
+
+.Flashpoint {
+    width: 2997px;
+    height: 666px;
+    background-image: url('img/flashpoint.jpg');
+    background-repeat: repeat-x; /* Repite la imagen horizontalmente */
+    animation: scrollBackground 10s linear infinite; /* Inicia la animación */
+    position: absolute;
+    bottom: 0;
+  }
+
+  @keyframes scrollBackground {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -2997px 0; /* Desplaza la imagen a lo largo del eje X */
+    }
+  }
+
+/* Clase para detener la animación del fondo */
+.stop-background-animation {
+    animation-play-state: paused;
+  }
+  
+  
+
+.cactus{
+    width:128px;
+    height: 240px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(img/obstacle.gif) no-repeat;
+}
+.cactus2 {
+    width: 130px;
+    height: 200px;
+    background: url(img/obstacle2.gif) no-repeat;
+    background-position: center center; /* Centra la imagen dentro del elemento */
+  }
+
+.flash{
+    width: 384px;
+    height: 240px;
+
+    position: absolute;
+    z-index: 0;
+
+    background: url(img/flashbackground.gif) no-repeat;
+    background-size: 92px 26px;
+    background-size: 50%;
+}
+
+.score{
+    width: 100px;
+    height: 30px;
+
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10;
+
+    color: #000000;
+    font-family: Verdana;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.game-over{
+    display: none;
+
+    position: absolute;
+    width: 100%;
+
+
+    text-align: center;
+    color: #ff0000;
+    font-size: 30px;
+    font-family: Verdana;
+    font-weight: 700;
+}
+
+@keyframes animarDino{
+    0%{
+        background-position-x: 0px;
+    }
+    100%{
+        background-position-x: -160px;
+    }
+}
